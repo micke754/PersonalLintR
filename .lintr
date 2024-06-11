@@ -1,23 +1,100 @@
 linters: linters_with_defaults(
-   assignment_linter(), # Ensures proper assignment operators
-   commas_linter(), # Checks for spaces after commas
-   commented_code_linter(), # Flags commented-out code
-   cyclocomp_linter(complexity_limit = 25), # Limits cyclomatic complexity to 25
-   equals_na_linter(), # Ensures proper NA checks
-   function_left_parentheses_linter(), # Ensures no space between function name and parentheses
-   infix_spaces_linter(), # Checks for spaces around infix operators
-   line_length_linter(length = 80), # Limits line length to 80 characters
-   whitespace_linter(), # Disallows tabs
-   object_length_linter(length = 30), # Limits object name length to 30 characters
-   object_name_linter(styles = "camelCase"), # Enforces camelCase for object names
-   object_usage_linter(), # Ensures objects are used after being defined
-   brace_linter(allow_single_line = TRUE), # Checks curly brace placement
-   paren_body_linter(), # Ensures no space between parentheses and brace
-   quotes_linter(), # Enforces single quotes for strings
-   spaces_inside_linter(), # Checks for spaces inside square brackets
-   spaces_left_parentheses_linter(), # Checks for spaces after left parentheses
-   trailing_blank_lines_linter(), # Disallows trailing blank lines
-   trailing_whitespace_linter(), # Disallows trailing whitespace
-   yoda_test_linter()) #test boolean equations using the yoda method
+	absolute_path_linter(),
+	any_duplicated_linter(),
+	any_is_na_linter(),
+	assignment_linter(),
+	backport_linter(),
+	boolean_arithmetic_linter(),
+	brace_linter(allow_single_line = TRUE),
+	class_equals_linter(),
+	commas_linter(),
+	commented_code_linter(),
+	condition_message_linter(),
+	conjunct_test_linter(),
+	consecutive_assertion_linter(),
+	cyclocomp_linter(complexity_limit = 25),
+	duplicate_argument_linter(),
+	empty_assignment_linter(),
+	equals_na_linter(),
+	expect_comparison_linter(),
+	expect_identical_linter(),
+	expect_length_linter(),
+	expect_named_linter(),
+	expect_not_linter(),
+	expect_null_linter(),
+	expect_s3_class_linter(),
+	expect_s4_class_linter(),
+	expect_true_false_linter(),
+	expect_type_linter(),
+	extraction_operator_linter(),
+	fixed_regex_linter(),
+	for_loop_index_linter(),
+	function_argument_linter(),
+	function_left_parentheses_linter(),
+	function_return_linter(),
+	if_not_else_linter(),
+	ifelse_censor_linter(),
+	implicit_assignment_linter(),
+	implicit_integer_linter(),
+	indentation_linter(),
+	infix_spaces_linter(),
+	inner_combine_linter(),
+	is_numeric_linter(),
+	keyword_quote_linter(),
+	length_levels_linter(),
+	length_test_linter(),
+	lengths_linter(),
+	library_call_linter(),
+	line_length_linter(length = 80),
+	literal_coercion_linter(),
+	matrix_apply_linter(),
+	missing_argument_linter(),
+	missing_package_linter(),
+	namespace_linter(),
+	nested_ifelse_linter(),
+	nonportable_path_linter(),
+	numeric_leading_zero_linter(),
+	object_length_linter(length = 30),
+	object_name_linter(styles = c("camelCase", "snake_case")),
+	object_usage_linter(),
+	outer_negation_linter(),
+	package_hooks_linter(),
+	paren_body_linter(),
+	paste_linter(),
+	pipe_call_linter(),
+	pipe_consistency_linter(),
+	pipe_continuation_linter(),
+	quotes_linter(),
+	redundant_equals_linter(),
+	redundant_ifelse_linter(),
+	regex_subset_linter(),
+	repeat_linter(),
+	routine_registration_linter(),
+	scalar_in_linter(),
+	semicolon_linter(),
+	seq_linter(),
+	sort_linter(),
+	spaces_inside_linter(),
+	spaces_left_parentheses_linter(),
+	sprintf_linter(),
+	string_boundary_linter(),
+	strings_as_factors_linter(),
+	system_file_linter(),
+	t_and_f_symbol_linter(),
+	todo_comment_linter(),
+	trailing_blank_lines_linter(),
+	trailing_whitespace_linter(),
+	undesirable_function_linter(),
+	undesirable_operator_linter(),
+	unnecessary_concatenation_linter(),
+	unnecessary_lambda_linter(),
+	unnecessary_nested_if_linter(),
+	unnecessary_placeholder_linter(),
+	unreachable_code_linter(),
+	unused_import_linter(),
+	vector_logic_linter(),
+	whitespace_linter(),
+	yoda_test_linter())
+
 encoding: "UTF-8"
 exclusions: list("renv", "packrat") # see ?lintr::exclude
