@@ -1,6 +1,8 @@
 library(lintr)
 library(dplyr)
 
+undesirable_function_linter(fun = c("library" = "NA"), symbol_is_undesirable = FALSE)
+
 lintersToUse <- all_linters() |>
   names() |>
   unlist() |>
