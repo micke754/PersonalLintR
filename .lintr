@@ -80,7 +80,6 @@ linters: linters_with_defaults(
 	string_boundary_linter(),
 	strings_as_factors_linter(),
 	system_file_linter(),
-	t_and_f_symbol_linter(),
 	todo_comment_linter(),
 	trailing_blank_lines_linter(),
 	trailing_whitespace_linter(),
@@ -95,6 +94,5 @@ linters: linters_with_defaults(
 	vector_logic_linter(),
 	whitespace_linter(),
 	yoda_test_linter())
-
 encoding: "UTF-8"
 exclusions: list("renv", "packrat") # see ?lintr::exclude
