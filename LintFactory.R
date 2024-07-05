@@ -10,4 +10,5 @@ lintersToUse <- all_linters() |>
 
 colnames(lintersToUse) <- c("linters")
 
+
 readr::write_csv(lintersToUse, "LintersToUse.csv")
